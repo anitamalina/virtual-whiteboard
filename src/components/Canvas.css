@@ -1,0 +1,7 @@
+canvas {
+  display: block;
+  width: 100%; /* can be 200% for more width - NICE2HAVE */
+  height: 100vh;
+  background-color: white;
+  z-index: 99;
+}
