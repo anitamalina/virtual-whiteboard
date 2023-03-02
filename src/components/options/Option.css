@@ -1,4 +1,4 @@
-.textOption {
+.option {
     width: 300px;
     background-color: whitesmoke;
     z-index: 101;
@@ -43,9 +43,30 @@
     margin-top: 0.3rem;
 }
 
+.input-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+}
+
+.input {
+    height: 0.5rem;
+    opacity: 0.5;
+    padding: 1rem;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    box-shadow: 2px 2px 5px lightslategrey;
+    margin-bottom: 15px;
+}
+
 .close-tag {
     text-align: right;
-    margin-top: 15px;
     padding: 0;
+    margin-bottom: 0;
     cursor: pointer;
+    color: rgba(0, 0, 0, 0.3);
   }
