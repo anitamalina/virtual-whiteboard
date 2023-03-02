@@ -3,5 +3,27 @@ canvas {
   width: 100%; /* can be 200% for more width - NICE2HAVE */
   height: 100vh;
   background-color: white;
-  z-index: 99;
+  z-index: 1;
+}
+
+h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    padding-top: 10px;
+    width: 100%; 
+    text-align: center;
+    background-color: white;
+}
+
+.subtitle {
+  position: absolute;
+    top: 22px;
+    left: 0;
+    margin: auto;
+    padding-top: 10px;
+    width: 100%; 
+    text-align: center;
+
 }

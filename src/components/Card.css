@@ -1,0 +1,22 @@
+.card {
+    width: 300px;
+    background-color: whitesmoke;
+    z-index: 101;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    padding: 20px; 
+    z-index: 101;
+    background-color:  rgba(187, 187, 187, 0.3);
+}
+
+
+.delete-tag {
+    text-align: right;
+    margin-top: 15px;
+    padding: 0;
+    cursor: pointer;
+  }
