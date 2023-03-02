@@ -1,5 +1,5 @@
 .card {
-    width: 300px;
+    width: 150px;
     background-color: whitesmoke;
     z-index: 101;
     position: absolute;
@@ -20,3 +20,11 @@
     padding: 0;
     cursor: pointer;
   }
+
+.option-type {
+    margin:0
+}
+
+.content {
+    
+}
