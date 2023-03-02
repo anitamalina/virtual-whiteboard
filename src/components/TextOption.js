@@ -42,9 +42,9 @@ export default function TextOption(props) {
           placeholder="What would you like to share ?"
           onChange={(e) => onChangeContent(e)}
           value={content}
-          maxLength={1000}
+          maxLength={280}
         />
-        <p className="count">{count} / 1000</p>
+        <p className="count">{count} / 280</p>
       </div>
       {content === "" ? (
         <>

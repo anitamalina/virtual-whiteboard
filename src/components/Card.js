@@ -8,8 +8,8 @@ export default function Card(props) {
       {/*       <p onClick={deleteCard} className="delete-tag">
         [x]
       </p> */}
-      <p>{props.optionType}</p>
-      <p>{props.content}</p>
+      <p className="option-type">{props.optionType}</p>
+      <p className="content">{props.content}</p>
     </div>
   );
 }
