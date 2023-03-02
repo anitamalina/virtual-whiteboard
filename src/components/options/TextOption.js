@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Button from "./Button";
-import "./TextOption.css";
+import Button from "../Button";
+import { generateRandomId } from "../generateRandomId";
+import "./Option.css";
 
 export default function TextOption(props) {
   const [content, setContent] = useState("");
@@ -11,14 +12,20 @@ export default function TextOption(props) {
     if (errorMessage) {
       setErrorMessage("");
     } else {
-      const newCard = { x, y, optionType: "Text", content };
+      const newCard = {
+        id: generateRandomId(),
+        x,
+        y,
+        optionType: "Text",
+        content,
+      };
       props.setCards([...props.cards, newCard]);
       props.setShowTextCard(false);
     }
   }
 
   function closeCard() {
-    props.setShowCard(false);
+    props.setShowTextCard(false);
   }
 
   const emptyInputError = () => {
@@ -31,10 +38,7 @@ export default function TextOption(props) {
   }
 
   return (
-    <div className="textOption" style={{ top: props.y, left: props.x }}>
-      <p onClick={closeCard} className="close-tag">
-        [x]
-      </p>
+    <div className="option" style={{ top: props.y, left: props.x }}>
       <p>Write a text:</p>
       <div className="textarea-box">
         <textarea
@@ -56,6 +60,9 @@ export default function TextOption(props) {
           Submit
         </Button>
       )}
+      <p onClick={closeCard} className="close-tag">
+        [cancel]
+      </p>
     </div>
   );
 }
