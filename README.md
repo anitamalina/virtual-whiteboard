@@ -4,7 +4,7 @@ To run the application follow below steps from the root-folder of the project:
 
 ### 1. `npm install`
 
-Only run this step the first time you. Installs the nessecary packages.
+Only run this step the first time you run the project. Installs the necessary packages.
 
 ### 2. `npm start`
 
