@@ -1,4 +1,5 @@
-## "Virtual Whiteboard"
+## Virtual Whiteboard
+*Add notes to the screen anywhere with a simple mouseclick.*
 
 To run the application follow below steps from the root-folder of the project:
 
