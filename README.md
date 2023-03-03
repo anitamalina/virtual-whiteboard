@@ -1,7 +1,7 @@
-# Virtual Whiteboard
+## Virtual Whiteboard
 Add notes to the screen anywhere with a simple mouseclick.
 
-## START
+### START
 To run the application follow below steps from the root-folder of the project:
 
 #### 1. `npm install`
