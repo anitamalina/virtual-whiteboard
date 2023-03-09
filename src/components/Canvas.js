@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./Canvas.css";
-import ThreeOptions from "./options/ThreeOptions";
-import Option from "./options/Option";
-import Card from "./cards/Card";
+import ThreeOptions from "./UI/ThreeOptions";
+import Option from "./UI/Option";
+import Card from "./UI/Card";
 
 const Canvas = () => {
   const canvasRef = useRef(null);
@@ -28,7 +28,7 @@ const Canvas = () => {
 
   function deleteCard(cardId) {
     const id = cardId;
-    let newCards = cards.filter(() => cardId !== id);
+    let newCards = cards.filter((card) => card.id !== id);
     setCards(newCards);
   }
 
@@ -68,7 +68,7 @@ const Canvas = () => {
           setShowOption={setShowOption}
           cards={cards}
           setCards={setCards}
-          optionType={choosenOption}
+          choosenOption={choosenOption}
         />
       )}
     </>

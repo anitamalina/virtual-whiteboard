@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "../Button";
+import Button from "./Button";
 import { generateRandomId } from "../generateRandomId";
 import "./Option.css";
 
@@ -9,19 +9,16 @@ export default function Option(props) {
   const [count, setCount] = useState(0);
 
   function submitContent(x, y, content) {
-    if (errorMessage) {
-      setErrorMessage("");
-    } else {
-      const newCard = {
-        id: generateRandomId(),
-        x,
-        y,
-        optionType: props.optionType,
-        content,
-      };
-      props.setCards([...props.cards, newCard]);
-      props.setShowOption(false);
-    }
+    setErrorMessage("");
+    const newCard = {
+      id: generateRandomId(),
+      x,
+      y,
+      optionType: props.choosenOption,
+      content,
+    };
+    props.setCards([...props.cards, newCard]);
+    props.setShowOption(false);
   }
 
   function closeOption() {
@@ -30,7 +27,7 @@ export default function Option(props) {
 
   const emptyInputError = () => {
     let errorType;
-    switch (props.optionType) {
+    switch (props.choosenOption) {
       case "Text":
         errorType = "write a text";
         break;
@@ -49,13 +46,13 @@ export default function Option(props) {
 
   function onChangeContent(e) {
     setContent(e.target.value);
-    if (props.optionType === "Text") {
+    if (props.choosenOption === "Text") {
       setCount(e.target.value.length);
     }
   }
 
   let optionContent;
-  switch (props.optionType) {
+  switch (props.choosenOption) {
     case "Text":
       optionContent = (
         <>
@@ -72,6 +69,7 @@ export default function Option(props) {
           </div>
         </>
       );
+      break;
     case "Image":
       optionContent = (
         <>
@@ -86,18 +84,22 @@ export default function Option(props) {
           </div>
         </>
       );
+      break;
     case "YouTube":
-      <>
-        <p>Paste YouTube ID:</p>
-        <div className="input-box">
-          <input
-            className="input"
-            placeholder="Paste a YouTube ID e.g. dQw4w9WgXcQ"
-            onChange={(e) => onChangeContent(e)}
-            value={content}
-          />
-        </div>
-      </>;
+      optionContent = (
+        <>
+          <p>Paste YouTube ID:</p>
+          <div className="input-box">
+            <input
+              className="input"
+              placeholder="Paste a YouTube ID e.g. dQw4w9WgXcQ"
+              onChange={(e) => onChangeContent(e)}
+              value={content}
+            />
+          </div>
+        </>
+      );
+      break;
   }
 
   return (

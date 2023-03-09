@@ -1,5 +1,5 @@
 import "./ThreeOptions.css";
-import Button from "../Button";
+import Button from "./Button";
 
 export default function ThreeOptions(props) {
   function openTextCard() {
