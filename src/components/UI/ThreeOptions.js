@@ -1,24 +1,27 @@
-import "./Options.css";
+import "./ThreeOptions.css";
 import Button from "./Button";
 
-export default function Options(props) {
+export default function ThreeOptions(props) {
   function openTextCard() {
-    props.setShowOptions(false);
-    props.setShowTextCard(true);
+    props.setShowThreeOptions(false);
+    props.setShowOption(true);
+    props.setChoosenOption("Text");
   }
 
   function openImageCard() {
-    props.setShowOptions(false);
-    props.setShowImageCard(true);
+    props.setShowThreeOptions(false);
+    props.setShowOption(true);
+    props.setChoosenOption("Image");
   }
 
   function openYouTubeCard() {
-    props.setShowOptions(false);
-    props.setShowYouTubeCard(true);
+    props.setShowThreeOptions(false);
+    props.setShowOption(true);
+    props.setChoosenOption("YouTube");
   }
 
   function closeOptions() {
-    props.setShowOptions(false);
+    props.setShowThreeOptions(false);
   }
 
   return (
