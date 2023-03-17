@@ -13,23 +13,36 @@ const Canvas = () => {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
+    recieveCards();
+  }, []);
+
+  useEffect(() => {
     const handleMouseClick = (event) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
       setShowThreeOptions(true);
       console.log("x: ", event.clientX, "y: ", event.clientY);
     };
 
-    console.log("cards", cards);
-
     const canvas = canvasRef.current;
 
     canvas.addEventListener("click", handleMouseClick);
-  }, [cards]);
+  }, []);
 
   function deleteCard(cardId) {
     const id = cardId;
     let newCards = cards.filter((card) => card.id !== id);
     setCards(newCards);
+
+    // Save card to local storage
+    localStorage.setItem("cards", JSON.stringify(newCards));
+  }
+
+  // Retrieve saved cards from local storage
+  function recieveCards() {
+    const savedCards = localStorage.getItem("cards");
+    if (savedCards) {
+      setCards(JSON.parse(savedCards));
+    }
   }
 
   return (

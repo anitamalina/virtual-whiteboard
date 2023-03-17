@@ -17,6 +17,10 @@ export default function Option(props) {
       optionType: props.choosenOption,
       content,
     };
+
+    // Save card to local storage
+    localStorage.setItem("cards", JSON.stringify([...props.cards, newCard]));
+
     props.setCards([...props.cards, newCard]);
     props.setShowOption(false);
   }
