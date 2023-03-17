@@ -3,6 +3,7 @@ import "./Canvas.css";
 import ThreeOptions from "./UI/ThreeOptions";
 import Option from "./UI/Option";
 import Card from "./UI/Card";
+import { useLocalStorageState } from "./../functions/useLocalStorageState";
 
 const Canvas = () => {
   const canvasRef = useRef(null);
@@ -10,11 +11,11 @@ const Canvas = () => {
   const [showThreeOptions, setShowThreeOptions] = useState(false);
   const [showOption, setShowOption] = useState(false);
   const [choosenOption, setChoosenOption] = useState(false);
-  const [cards, setCards] = useState([]);
+  const [cards, setCards] = useLocalStorageState("cards", []);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     recieveCards();
-  }, []);
+  }, []); */
 
   useEffect(() => {
     const handleMouseClick = (event) => {
@@ -24,25 +25,17 @@ const Canvas = () => {
     };
 
     const canvas = canvasRef.current;
-
     canvas.addEventListener("click", handleMouseClick);
-  }, []);
+
+    /*     return () => {
+      canvas.removeEventListener("click", handleMouseClick);
+    }; */
+  }, [cards]);
 
   function deleteCard(cardId) {
     const id = cardId;
     let newCards = cards.filter((card) => card.id !== id);
     setCards(newCards);
-
-    // Save card to local storage
-    localStorage.setItem("cards", JSON.stringify(newCards));
-  }
-
-  // Retrieve saved cards from local storage
-  function recieveCards() {
-    const savedCards = localStorage.getItem("cards");
-    if (savedCards) {
-      setCards(JSON.parse(savedCards));
-    }
   }
 
   return (
