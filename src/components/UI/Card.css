@@ -11,6 +11,7 @@
     padding: 20px; 
     z-index: 101;
     background-color:  rgba(187, 187, 187, 0.3);
+    cursor: move;
 }
 
 .delete-tag {
@@ -26,9 +27,15 @@
     margin:0;
     margin-bottom: 10px;
     font-weight: 600;
+    user-select: none;
 }
 
 img {
     width: 200px;
     border-radius: 5px;
+    user-select: none;
+}
+
+.content {
+    user-select: none;
 }
