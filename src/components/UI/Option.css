@@ -1,16 +1,18 @@
+@import url(./../../index.css);
+
 .option {
     width: 300px;
-    background-color: whitesmoke;
+    background-color: var(--primary-grey-white);
     z-index: 101;
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    background-color: var(--primary-white);
+    box-shadow: 0 1px 4px var(--primary-black-grey-trans);
     padding: 10px 20px 10px 20px; 
     z-index: 200;
-    background-color:  rgb(218, 218, 218);
+    background-color: var(--primary-grey-white);
     border-radius: 5px;
     border: none;
 }
@@ -28,10 +30,11 @@
     opacity: 0.5;
     padding: 1rem;
     font-size: 0.8rem;
-    border: 1px, solid, lightgrey;
+    border: 1px, solid, var(--primary-grey-white);
     border-radius: 5px;
     resize: none;
-    box-shadow: 2px 2px 5px lightslategrey;
+    box-shadow: 2px 2px 5px var(--primary-grey);
+    cursor: var(--cursor-text);
 }
 
 .count {
@@ -59,14 +62,15 @@
     border: none;
     border-radius: 5px;
     resize: none;
-    box-shadow: 2px 2px 5px lightslategrey;
+    box-shadow: 2px 2px 5px var(--primary-grey);
     margin-bottom: 15px;
+    cursor: var(--cursor-text);
 }
 
 .cancel-tag {
     text-align: right;
     padding: 0;
     margin-bottom: 10px;
-    cursor: pointer;
-    color: rgba(0, 0, 0, 0.3);
+    cursor: var(--cursor-pointer);
+    color: var(--primary-black-grey-trans);
   }

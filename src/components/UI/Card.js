@@ -52,15 +52,9 @@ export default function Card(props) {
     setDragging(false);
   };
 
-  let wdt;
-  if (props.optionType === "YouTube") {
-    wdt = "300px";
-  } else {
-    wdt = "200px";
-  }
-
   const opts = {
-    width: "300px",
+    width: "200px",
+    height: "120px",
   };
 
   let content;
@@ -72,7 +66,9 @@ export default function Card(props) {
       content = <img src={props.content} alt="upload" />;
       break;
     case "YouTube":
-      content = <YouTube videoId={props.content} opts={opts} />;
+      content = (
+        <YouTube className="youtube" videoId={props.content} opts={opts} />
+      );
       break;
     default:
       content = <p>An error happened. Please try again.</p>;
@@ -81,7 +77,7 @@ export default function Card(props) {
   return (
     <div
       className={`card ${isDragging ? "dragging" : ""}`}
-      style={{ left: `${props.x}px`, top: `${props.y}px`, width: wdt }}
+      style={{ left: `${props.x}px`, top: `${props.y}px` }}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleDragEnd}

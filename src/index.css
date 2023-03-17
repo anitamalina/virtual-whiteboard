@@ -1,0 +1,37 @@
+:root {
+  /* Primary Colors */
+  --primary-black: rgb(0, 0, 0);
+  --primary-black-grey-trans: rgba(0, 0, 0, 0.3); 
+  --primary-grey-dark-trans: rgba(100, 100, 100, 0.3);
+  --primary-grey-light-trans: rgba(187, 187, 187, 0.3);
+  --primary-grey: rgb(119, 136, 153);
+  --primary-grey-white: rgb(218, 218, 218);
+  --primary-white: rgb(255, 255, 255);
+
+
+  /* Secondary Colors */
+  --secondary-color-pink: #ff00c8e1;
+
+  /* Cursors */
+  --cursor-auto: url("./../public/cursors/select.cur"), auto;
+  --cursor-pointer: url("./../public/cursors/pointer.cur"), pointer;
+  --cursor-move: url("./../public/cursors/move.cur"), move;
+  --cursor-text: url("./../public/cursors/text.cur"), text;
+}
+
+h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    padding-top: 10px;
+    width: 100%; 
+    text-align: center;
+    background-color: var(--primary-white);
+    user-select: none;
+}
+
+p {
+    margin-bottom: 15px;
+}
+

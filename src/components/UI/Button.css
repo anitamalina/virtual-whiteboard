@@ -1,22 +1,24 @@
+@import url(./../../index.css);
+
 button {
     border-radius: 5px;
     border: none;
-    background-color:  rgba(100, 100, 100, 0.3);
-    color: #fff;
+    background-color: var(--primary-grey-dark-trans);
+    color: var(--primary-white);
     padding: 10px 20px;
     font-size: 16px;
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
     transition: background-color 0.3s ease;
     margin-bottom: 2px;
     width: 150px;
   }
   
   button:hover {
-    background-color: #ff00c8e1;
+    background-color: var(--secondary-color-pink);
   }
 
   button.disabled {
     background-color: transparent;
-    cursor: default;
-    outline: 1px solid rgba(100, 100, 100, 0.3);
+    cursor: var(--cursor-auto);
+    outline: 1px solid var(--primary-grey-dark-trans);
   }
