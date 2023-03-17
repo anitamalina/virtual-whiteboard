@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
-import { generateRandomId } from "../generateRandomId";
+import { generateRandomId } from "../../functions/generateRandomId";
 import "./Option.css";
 
 export default function Option(props) {
@@ -116,7 +116,7 @@ export default function Option(props) {
           Submit
         </Button>
       )}
-      <p onClick={closeOption} className="close-tag">
+      <p onClick={closeOption} className="cancel-tag">
         [cancel]
       </p>
     </div>

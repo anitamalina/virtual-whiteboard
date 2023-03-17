@@ -8,7 +8,7 @@
     align-items: center;
     background-color: #fff;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    padding: 20px; 
+    padding: 10px 20px 10px 20px; 
     z-index: 200;
     background-color:  rgb(218, 218, 218);
     border-radius: 5px;
@@ -63,10 +63,10 @@
     margin-bottom: 15px;
 }
 
-.close-tag {
+.cancel-tag {
     text-align: right;
     padding: 0;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     cursor: pointer;
     color: rgba(0, 0, 0, 0.3);
   }

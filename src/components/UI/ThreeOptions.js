@@ -30,7 +30,7 @@ export default function ThreeOptions(props) {
       <Button handleClick={openTextCard}>Text</Button>
       <Button handleClick={openImageCard}>Image</Button>
       <Button handleClick={openYouTubeCard}>YouTube</Button>
-      <p onClick={closeOptions} className="close-tag">
+      <p onClick={closeOptions} className="cancel-tag">
         [cancel]
       </p>
     </div>
