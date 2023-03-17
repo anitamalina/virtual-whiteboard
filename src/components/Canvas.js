@@ -7,6 +7,7 @@ import { useLocalStorageState } from "./../functions/useLocalStorageState";
 
 const Canvas = () => {
   const canvasRef = useRef(null);
+  const cardRefs = useRef({});
   const [mousePosition, setMousePosition] = useState({});
   const [showThreeOptions, setShowThreeOptions] = useState(false);
   const [showOption, setShowOption] = useState(false);
@@ -28,6 +29,10 @@ const Canvas = () => {
     };
   }, []);
 
+  const addCardRef = (id, ref) => {
+    cardRefs.current[id] = ref;
+  };
+
   function deleteCard(cardId) {
     const id = cardId;
     let newCards = cards.filter((card) => card.id !== id);
@@ -44,11 +49,14 @@ const Canvas = () => {
           return (
             <Card
               key={card.id}
+              id={card.id}
               x={card.x}
               y={card.y}
               optionType={card.optionType}
               content={card.content}
               handleDelete={() => deleteCard(card.id)}
+              addCardRef={addCardRef}
+              setCards={setCards}
             />
           );
         })}
