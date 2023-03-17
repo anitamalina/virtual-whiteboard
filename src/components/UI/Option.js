@@ -47,6 +47,7 @@ export default function Option(props) {
 
   function onChangeContent(e) {
     setContent(e.target.value);
+    setErrorMessage("");
     if (props.choosenOption === "Text") {
       setCount(e.target.value.length);
     }
@@ -108,11 +109,16 @@ export default function Option(props) {
       {optionContent}
       {content === "" ? (
         <>
-          <Button handleClick={emptyInputError}>Submit</Button>
+          <Button disable={true} handleClick={emptyInputError}>
+            Submit
+          </Button>
           {errorMessage && <p className="errorMessage">{errorMessage}</p>}
         </>
       ) : (
-        <Button handleClick={() => submitContent(props.x, props.y, content)}>
+        <Button
+          disable={false}
+          handleClick={() => submitContent(props.x, props.y, content)}
+        >
           Submit
         </Button>
       )}
