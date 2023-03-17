@@ -13,10 +13,6 @@ const Canvas = () => {
   const [choosenOption, setChoosenOption] = useState(false);
   const [cards, setCards] = useLocalStorageState("cards", []);
 
-  /*   useEffect(() => {
-    recieveCards();
-  }, []); */
-
   useEffect(() => {
     const handleMouseClick = (event) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
@@ -27,10 +23,10 @@ const Canvas = () => {
     const canvas = canvasRef.current;
     canvas.addEventListener("click", handleMouseClick);
 
-    /*     return () => {
+    return () => {
       canvas.removeEventListener("click", handleMouseClick);
-    }; */
-  }, [cards]);
+    };
+  }, []);
 
   function deleteCard(cardId) {
     const id = cardId;
