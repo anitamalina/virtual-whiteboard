@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/virtual-whiteboard/static/css/main.b0a613fc.css",
+    "main.js": "/virtual-whiteboard/static/js/main.c053f288.js",
+    "static/media/move.cur": "/virtual-whiteboard/static/media/move.5b2790f3c4656b65b862.cur",
+    "static/media/pointer.cur": "/virtual-whiteboard/static/media/pointer.75b962c4465fe9dc86a4.cur",
+    "static/media/text.cur": "/virtual-whiteboard/static/media/text.3b35cfbdc1c1c4b476e2.cur",
+    "static/media/select.cur": "/virtual-whiteboard/static/media/select.c5711aa1dcfd57b0be7a.cur",
+    "index.html": "/virtual-whiteboard/index.html",
+    "main.b0a613fc.css.map": "/virtual-whiteboard/static/css/main.b0a613fc.css.map",
+    "main.c053f288.js.map": "/virtual-whiteboard/static/js/main.c053f288.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0a613fc.css",
+    "static/js/main.c053f288.js"
+  ]
+}
