@@ -10,11 +10,13 @@ canvas {
 
 .subtitle {
   position: absolute;
-    top: 22px;
-    left: 0;
-    margin: auto;
-    padding-top: 10px;
-    width: 100%; 
-    text-align: center;
-    user-select: none;
+  top: 22px;
+  left: 0;
+  margin: auto;
+  padding-top: 10px;
+  width: 100%; 
+  text-align: center;
+  user-select: none;
+  color: var(--secondary-color-pink);
+  font-weight: 600;
 }
