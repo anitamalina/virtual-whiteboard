@@ -42,7 +42,7 @@ const Canvas = () => {
   return (
     <>
       <h1>Virtual Whiteboard</h1>
-      <p className="subtitle">Something you want to share?</p>
+      <p className="subtitle">Save you farvorite things to the board</p>
       <canvas ref={canvasRef} />
       {cards.length > 0 &&
         cards.map((card) => {
